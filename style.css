@@ -4,6 +4,7 @@
     --white: rgb(238, 249, 255);
     --gray: rgb(122, 143, 158);
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif
 }
 p, ul { 
     margin: 0;
