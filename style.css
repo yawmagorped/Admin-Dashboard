@@ -74,6 +74,11 @@ body {
     align-items: center;
 }
 
+.notification-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .user-info {
     display: flex;
     align-items: center;
