@@ -1,0 +1,229 @@
+:root {
+    --blue: rgb(16, 210, 245);
+    --yellow: rgb(180, 150, 15);
+    --white: rgb(238, 249, 255);
+    --gray: rgb(122, 143, 158);
+    font-size: 16px;
+}
+p, ul { 
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-color: var(--gray);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 20% 80%;
+}
+
+.dashboard {
+    padding: 24px;
+    background-color: var(--blue);
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.192);
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.nav > ul, .options > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    padding: 16px 32px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2.5px 5px 5px rgba(0, 0, 0, 0.137);
+}
+
+.search-bar {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.search-bar :first-child {
+    height: 30px;
+    width: 30px;
+}
+
+.search-bar > input {
+    width: 75%;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(9, 120, 139, 0.329);
+}
+
+.header-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-self: flex-end;
+}
+
+.header-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.user-greeting {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 30px 30px;
+    column-gap: 16px;
+    align-items: center;
+}
+.user-greeting > p:first-of-type {
+    font-size: .9rem;
+}
+
+.user-greeting > p:nth-of-type(2) {
+    font-size: 1.7rem;
+}
+
+.user-picture {
+    grid-row: 1 / -1;
+}
+
+.user-picture, .trending-icon, .project-icon-container > * {
+    background-color: rgb(153, 153, 153);
+    width: 60px;
+    height: 60px;
+
+    border-radius: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trending-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 30px 30px;
+    align-items: center;
+}
+
+.trending-icon {
+    width: 45px;
+    height: 45px;
+    grid-row: 1 / -1;
+}
+
+.trending-user {
+    font-size: 1.2rem;
+}
+.trending-msg {
+    align-self: flex-start;
+}
+.button-container {
+    justify-self: flex-end;
+    display: flex;
+    gap: 30px;
+}
+
+.content {
+    padding: 36px 24px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+}
+
+.projects {
+    grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 16px;
+}
+
+.project {
+    border-left: 8px solid var(--yellow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.project-content, .announcement-content , .trending-msg{
+    color: rgb(71, 71, 71);
+}
+
+.project, .announcements, .trending {
+    background-color: var(--white);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.24);
+}
+
+.project-icon-container {
+    align-self: flex-end;
+    display: flex;
+    gap: 16px;
+}
+
+.project-icon-container > * {
+    width: 30px;
+    height: 30px;
+}
+
+.announcements {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 32px;
+}
+.announcement-title {
+    font-weight: bold;
+}
+.announcement-content {
+    font-size: .95rem;
+}
+.announcement:not(.announcements > :last-child) {
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.322);
+
+}
+
+.announcement > * {
+    padding: 0px 8px;
+}
+
+button {
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--blue);
+    border: none;
+    width: 100px;
+    height: 40px;
+}
